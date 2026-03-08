@@ -36,7 +36,7 @@ While designed with MATLAB in mind, Ravin works beautifully across many programm
 
 The color scheme is carefully balanced to provide excellent contrast and readability regardless of language.
 
-## Language Examples
+<!-- ## Language Examples -->
 
 <!-- TODO: Add screenshots of code examples with Ravin theme
 The following language examples should have screenshots embedded.
@@ -100,7 +100,7 @@ To complete this section:
 
 End TODO -->
 
-For now, see the demo files in the [demos](demos) folder for code examples in each supported language.
+<!-- For now, see the demo files in the [demos](demos) folder for code examples in each supported language. -->
 
 ## License
 
