@@ -1,0 +1,31 @@
+{
+  "name": "ravin",
+  "displayName": "Ravin",
+  "description": "A dark color theme for VS Code",
+  "version": "0.0.1",
+  "publisher": "mlilyleaf",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ravin",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ravin.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlilyleaf/ravin"
+  },
+  "keywords": [
+    "theme",
+    "color-theme",
+    "dark"
+  ]
+}

@@ -1,0 +1,195 @@
+# YAML Demo - Application Configuration
+# This demonstrates YAML syntax highlighting in the Ravin theme
+
+name: Example Application
+version: 1.0.0
+description: A demonstration application showing YAML syntax
+author: Developer
+license: MIT
+
+# Environment Configuration
+environment:
+  development:
+    debug: true
+    port: 3000
+    database_url: postgresql://localhost:5432/app_dev
+    log_level: debug
+    workers: 2
+
+  production:
+    debug: false
+    port: 8080
+    database_url: ${DB_URL}
+    log_level: info
+    workers: 8
+
+# Database Configuration
+database:
+  driver: postgresql
+  host: localhost
+  port: 5432
+  name: app_database
+  user: db_user
+  password: ${DB_PASSWORD}
+  pool:
+    min: 2
+    max: 10
+  timeout: 30
+  ssl: false
+
+# API Configuration
+api:
+  base_url: https://api.example.com
+  version: v1
+  timeout_seconds: 30
+  rate_limit:
+    enabled: true
+    requests_per_minute: 60
+    burst_size: 10
+  authentication:
+    type: jwt
+    token_expiry_hours: 24
+    refresh_token_expiry_days: 30
+  cors:
+    enabled: true
+    allowed_origins:
+      - https://example.com
+      - https://www.example.com
+    allowed_methods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+    allowed_headers:
+      - Content-Type
+      - Authorization
+
+# Feature Flags
+features:
+  analytics: true
+  user_management: true
+  admin_panel:
+    enabled: true
+    restricted_to:
+      - admin
+      - moderator
+  beta_features:
+    enabled: false
+    allowed_users:
+      - user1@example.com
+      - user2@example.com
+
+# Logging Configuration
+logging:
+  level: info
+  format: json
+  outputs:
+    - type: file
+      path: logs/app.log
+      rotation:
+        max_size_mb: 100
+        max_backup_files: 5
+        days_retained: 30
+    - type: console
+      format: pretty
+      colors: true
+
+# User Roles and Permissions
+roles:
+  admin:
+    description: Administrator with full access
+    permissions:
+      - '*'
+  
+  moderator:
+    description: Moderator with limited administrative access
+    permissions:
+      - user:read
+      - user:moderate
+      - content:delete
+      - reports:view
+  
+  user:
+    description: Regular user with basic access
+    permissions:
+      - profile:read
+      - profile:update
+      - content:create
+      - content:read
+
+# Application Dependencies
+dependencies:
+  server:
+    - framework: express
+      version: ^4.18.0
+    - orm: typeorm
+      version: ^0.3.0
+    - validation: joi
+      version: ^17.0.0
+  
+  utilities:
+    - logging: pino
+      version: ^8.0.0
+    - authentication: jsonwebtoken
+      version: ^9.0.0
+    - data: lodash
+      version: ^4.17.0
+
+# Health Check Configuration
+health_check:
+  enabled: true
+  interval_seconds: 30
+  timeout_seconds: 10
+  endpoints:
+    - path: /health
+      method: get
+    - path: /health/deep
+      method: get
+      expensive: true
+
+# Notification Services
+notifications:
+  email:
+    enabled: true
+    sender: noreply@example.com
+    smtp:
+      host: smtp.example.com
+      port: 587
+      secure: true
+  
+  slack:
+    enabled: false
+    webhook_url: ${SLACK_WEBHOOK_URL}
+    channels:
+      - alerts
+      - notifications
+  
+  sms:
+    enabled: false
+    provider: twilio
+    credentials: ${SMS_CREDENTIALS}
+
+# Deployment Configuration
+deployment:
+  docker:
+    enabled: true
+    registry: docker.io
+    image_name: myapp
+    tags:
+      - latest
+      - v1.0.0
+  
+  kubernetes:
+    enabled: false
+    namespace: default
+    replicas: 3
+    resources:
+      cpu: 500m
+      memory: 512Mi
+
+# Meta Information
+metadata:
+  created_date: 2026-03-08
+  last_updated: 2026-03-08
+  maintenance_mode: false
+  status: active
