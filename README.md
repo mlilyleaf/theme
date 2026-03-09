@@ -4,11 +4,18 @@ A dark color theme for Visual Studio Code, designed primarily for **MATLAB** dev
 
 ## Overview
 
-Ravin is a carefully crafted dark theme that prioritizes readability and visual hierarchy. It features a sophisticated color palette with warm and cool tones that work harmoniously across your code. The theme excels at MATLAB syntax highlighting but is equally effective for JavaScript, Python, TypeScript, HTML, CSS, and many other languages.
+Ravin is a carefully crafted dark theme inspired by misty landscapes and foggy atmospheres. It features a sophisticated color palette with muted teals, soft blues, sage greens, and warm peachy accents that create a calming yet readable coding environment. The theme prioritizes high contrast between backgrounds and foregrounds while maintaining a cohesive atmospheric aesthetic. It excels at MATLAB syntax highlighting but is equally effective for JavaScript, Python, TypeScript, HTML, CSS, and many other languages.
 
 ## Features
 
-- **Dark background** with carefully selected accent colors
+- **Misty atmospheric aesthetic** with foggy blues, muted teals, and warm peachy tones
+- **High contrast design** with darkened backgrounds and brightened foregrounds for excellent readability
+- **Distinctive syntax colors**:
+  - Soft blue strings and muted teal control keywords
+  - Sage green storage types and peachy function names
+  - White variables for maximum clarity
+  - Subtle gray comments that stay out of the way
+- **Warm UI accents** including a dark red-rose status bar and soft yellow activity bar highlights
 - **Optimized for MATLAB** with distinct color treatment for keywords, functions, and comments
 - **Works great with other languages** including JavaScript, Python, Java, C/C++, and more
 - **Enhanced bracket pair guides** for better code navigation
@@ -29,12 +36,12 @@ Ravin is a carefully crafted dark theme that prioritizes readability and visual 
 
 ## Language Support
 
-While designed with MATLAB in mind, Ravin works beautifully across many programming languages:
+While designed with MATLAB in mind, Ravin's atmospheric color palette and high-contrast design work beautifully across many programming languages:
 
 - **Primary**: MATLAB
 - **Also great for**: JavaScript, TypeScript, Python, Java, C/C++, C#, Go, Rust, HTML, CSS, JSON, YAML, and more
 
-The color scheme is carefully balanced to provide excellent contrast and readability regardless of language.
+The misty color scheme combines muted cool tones with warm accents to provide excellent contrast and reduce eye strain, regardless of language.
 
 <!-- ## Language Examples -->
 
